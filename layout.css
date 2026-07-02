@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtualizaHub | Portal de Noticias</title>
+    <link rel="stylesheet" href="estilos/layout.css">
+</head>
+
+<body>
+    <a class="pular-conteudo" href="#conteudo-principal">Pular para o conteudo</a>
+
+    <header class="topo">
+        <figure class="marca">
+            <img src="midias/logo.svg" alt="Logotipo AtualizaHub" class="logo">
+            <figcaption>
+                <span>Portal corporativo</span>
+                <strong>AtualizaHub</strong>
+            </figcaption>
+        </figure>
+        <h1>Noticias, tecnologia e inovacão em um só lugar</h1>
+    </header>
+
+    <nav aria-label="Menu principal">
+        <ul>
+            <li><a href="index.html" aria-current="page">Pagina principal</a></li>
+            <li><a href="paginas/sobre.html">Sobre</a></li>
+            <li><a href="paginas/contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main id="conteudo-principal">
+        <article class="noticia">
+            <header class="cabecalho-noticia">
+                <p class="tag">Tecnologia e negocios</p>
+                <h2>Empresas ampliam o uso de inteligência artificial em processos internos</h2>
+                <p class="resumo">
+                    Ferramentas digitais estão ajudando equipes a organizar tarefas, analisar dados e melhorar
+                    o atendimento ao publico com mais agilidade.
+                </p>
+                <p class="meta">Por Redacao AtualizaHub - 11 de junho de 2026</p>
+            </header>
+
+            <figure>
+                <img src="midias/noticia-destaque.svg" alt="Ilustracao de uma tela com manchetes de noticias digitais">
+                <figcaption>Portal organiza conteudos com titulo, imagem, legenda e secoes internas.</figcaption>
+            </figure>
+
+            <section>
+                <h3>Transformacao digital nas rotinas</h3>
+                <p>
+                    A transformacao digital deixou de ser apenas uma tendencia e passou a fazer parte da rotina
+                    de empresas de diferentes tamanhos. Sistemas online, plataformas de comunicacao e analise de
+                    dados tornam as decisoes mais rapidas e bem informadas.
+                </p>
+                <p>
+                    Quando aplicadas com planejamento, essas tecnologias tambem favorecem a acessibilidade, pois
+                    permitem que conteudos sejam organizados com estrutura clara para leitores, mecanismos de busca
+                    e leitores de tela.
+                </p>
+            </section>
+
+            <section>
+                <h3>Conteudo acessivel e semantico</h3>
+                <p>
+                    Um portal de noticias deve apresentar titulos, secoes, imagens com textos alternativos e menus
+                    organizados. Essa estrutura ajuda o usuario a navegar com facilidade e melhora a compreensao do
+                    conteudo publicado.
+                </p>
+            </section>
+        </article>
+
+        <section class="grade-noticias" aria-labelledby="ultimas-noticias">
+            <h2 id="ultimas-noticias">Ultimas atualizacoes</h2>
+
+            <article class="cartao">
+                <p class="tag">Seguranca</p>
+                <h3>Cuidados simples reduzem riscos de vazamento</h3>
+                <p>Senhas fortes, backups e orientacao da equipe continuam entre as acoes mais importantes.</p>
+            </article>
+
+            <article class="cartao">
+                <p class="tag">Marketing</p>
+                <h3>Conteudo util aproxima marcas e clientes</h3>
+                <p>Publicacoes objetivas ajudam o publico a entender produtos, servicos e valores da empresa.</p>
+            </article>
+
+            <article class="cartao">
+                <p class="tag">Acessibilidade</p>
+                <h3>Estrutura semantica melhora a leitura do site</h3>
+                <p>Tags corretas ajudam usuarios, leitores de tela e mecanismos de busca a entenderem a pagina.</p>
+            </article>
+        </section>
+    </main>
+
+    <aside aria-labelledby="links-relacionados">
+        <h2 id="links-relacionados">Mais lidos</h2>
+        <ul class="lista-lateral">
+            <li><a href="#">Como proteger dados da empresa</a></li>
+            <li><a href="#">Tendencias de marketing digital</a></li>
+            <li><a href="#">Boas praticas para sites acessiveis</a></li>
+        </ul>
+
+        <h2>Categorias</h2>
+        <ul class="lista-lateral">
+            <li><a href="#">Tecnologia</a></li>
+            <li><a href="#">Inovacao</a></li>
+            <li><a href="#">Negocios</a></li>
+            <li><a href="#">Educacao</a></li>
+        </ul>
+    </aside>
+
+    <footer>
+        <p>&copy; 2026 AtualizaHub. Todos os direitos reservados.</p>
+        <p><a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+    </footer>
+</body>
+
+</html>

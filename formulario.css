@@ -1,0 +1,68 @@
+function formatarData(dataIso) {
+    if (!dataIso) {
+        return "Nao informado";
+    }
+
+    const partes = dataIso.split("-");
+    const data = new Date(partes[0], partes[1] - 1, partes[2]);
+    return data.toLocaleDateString("pt-BR");
+}
+
+function mostrarDadosForm(event) {
+    event.preventDefault();
+
+    const formulario = event.currentTarget;
+
+    if (!formulario.checkValidity()) {
+        formulario.reportValidity();
+        return;
+    }
+
+    const motivo = document.getElementById("slMotivo");
+    const dados = {
+        nome: document.getElementById("ipNome").value.trim(),
+        email: document.getElementById("ipEmail").value.trim(),
+        telefone: document.getElementById("ipTelefone").value.trim() || "Nao informado",
+        dataNascimento: formatarData(document.getElementById("ipDtNascimento").value),
+        motivo: motivo.options[motivo.selectedIndex].text,
+        mensagem: document.getElementById("taMensagem").value.trim() || "Sem mensagem",
+        novidades: document.getElementById("ipNovidades").checked ? "Sim" : "Nao"
+    };
+
+    sessionStorage.setItem("dadosContato", JSON.stringify(dados));
+    window.location.href = formulario.action;
+}
+
+function preencherConfirmacao() {
+    const resposta = document.getElementById("resposta");
+
+    if (!resposta) {
+        return;
+    }
+
+    const dadosSalvos = sessionStorage.getItem("dadosContato");
+
+    if (!dadosSalvos) {
+        resposta.innerText = "Nenhum dado foi enviado ainda";
+        return;
+    }
+
+    const dados = JSON.parse(dadosSalvos);
+
+    resposta.innerText = "Ola, " + dados.nome + ", confira os dados informados:";
+    document.getElementById("pNome").innerText = dados.nome;
+    document.getElementById("pEmail").innerText = dados.email;
+    document.getElementById("pTelefone").innerText = dados.telefone;
+    document.getElementById("pData").innerText = dados.dataNascimento;
+    document.getElementById("pMotivo").innerText = dados.motivo;
+    document.getElementById("pMensagem").innerText = dados.mensagem;
+    document.getElementById("pNovidades").innerText = dados.novidades;
+}
+
+const formulario = document.getElementById("formulario");
+
+if (formulario) {
+    formulario.addEventListener("submit", mostrarDadosForm);
+}
+
+preencherConfirmacao();

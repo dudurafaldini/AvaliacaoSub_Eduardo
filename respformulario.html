@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | AtualizaHub</title>
+    <link rel="stylesheet" href="../estilos/layout.css">
+    <link rel="stylesheet" href="../estilos/formulario.css">
+</head>
+
+<body>
+    <a class="pular-conteudo" href="#conteudo-principal">Pular para o conteudo</a>
+
+    <header class="topo">
+        <figure class="marca">
+            <img src="../midias/logo.svg" alt="Logotipo AtualizaHub" class="logo">
+            <figcaption>
+                <span>Portal corporativo</span>
+                <strong>AtualizaHub</strong>
+            </figcaption>
+        </figure>
+        <h1>Fale com a redação</h1>
+    </header>
+
+    <nav aria-label="Menu principal">
+        <ul>
+            <li><a href="../index.html">Pagina principal</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html" aria-current="page">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main id="conteudo-principal" class="pagina-formulario">
+        <section class="noticia">
+            <header class="cabecalho-noticia">
+                <p class="tag">Atendimento</p>
+                <h2>Envie sua mensagem</h2>
+                <p class="resumo">
+                    Preencha o formulario abaixo para entrar em contato com a equipe do AtualizaHub.
+                    Os campos marcados como obrigatorios precisam ser respondidos.
+                </p>
+            </header>
+
+            <form id="formulario" action="respformulario.html" novalidate>
+                <fieldset>
+                    <legend>Dados pessoais</legend>
+
+                    <p>
+                        <label for="ipNome">Nome completo</label><br>
+                        <input type="text" id="ipNome" name="nome" required minlength="3">
+                    </p>
+
+                    <p>
+                        <label for="ipEmail">E-mail</label><br>
+                        <input type="email" id="ipEmail" name="email" required>
+                    </p>
+
+                    <p>
+                        <label for="ipTelefone">Telefone</label><br>
+                        <input type="tel" id="ipTelefone" name="telefone" placeholder="(00) 00000-0000">
+                    </p>
+
+                    <p>
+                        <label for="ipDtNascimento">Data de nascimento</label><br>
+                        <input type="date" id="ipDtNascimento" name="dataNascimento">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Sua mensagem</legend>
+
+                    <p>
+                        <label for="slMotivo">Onde nos conheceu</label><br>
+                        <select id="slMotivo" name="motivo" required>
+                            <option value="" selected disabled>Selecione uma opcao</option>
+                            <option value="google">Busca no Google</option>
+                            <option value="redes-sociais">Redes sociais</option>
+                            <option value="indicacao">Indicacao de amigo</option>
+                            <option value="newsletter">Newsletter</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="taMensagem">Mensagem</label><br>
+                        <textarea id="taMensagem" name="mensagem" rows="5"></textarea>
+                    </p>
+
+                    <p>
+                        <label for="ipNovidades">
+                            <input type="checkbox" id="ipNovidades" name="novidades">
+                            Desejo receber novidades por e-mail
+                        </label>
+                    </p>
+                </fieldset>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AtualizaHub. Todos os direitos reservados.</p>
+        <p><a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+    </footer>
+
+    <script src="../scripts/enviarDadosForms.js"></script>
+</body>
+
+</html>
